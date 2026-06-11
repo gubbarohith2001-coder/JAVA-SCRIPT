@@ -2,7 +2,7 @@
 const promise = new Promise((resolve, reject) => {
   // Do some async task
   setTimeout(() => {
-    console.log('Async task complete');
+    console.log("Async task complete");
     resolve();
   }, 1000);
 });
@@ -16,9 +16,9 @@ const getUser = new Promise((resolve, reject) => {
     let error = true;
 
     if (!error) {
-      resolve({ name: 'John', age: 30 });
+      resolve({ name: "John", age: 30 });
     } else {
-      reject('Error: Something went wrong');
+      reject("Error: Something went wrong");
     }
   }, 1000);
 });
@@ -26,6 +26,6 @@ const getUser = new Promise((resolve, reject) => {
 getUser
   .then((user) => console.log(user))
   .catch((error) => console.log(error))
-  .finally(() => console.log('The promise has been resolved or rejected'));
+  .finally(() => console.log("The promise has been resolved or rejected"));
 
-console.log('Hello from global scope');
+console.log("Hello from global scope");
